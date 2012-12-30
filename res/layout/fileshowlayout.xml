@@ -1,0 +1,38 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <include layout="@layout/bookhead" android:id="@+id/head"/>
+    <FrameLayout 
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:background="@drawable/page"
+        android:layout_below="@+id/head"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"> 
+        <ListView
+        android:id="@+id/listview"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:text="@string/hello_world"
+       	android:drawSelectorOnTop="false"
+	    android:scrollbars="vertical"
+	   	android:fadingEdgeLength="0dip"
+       	android:dividerHeight="1dip"
+       	android:focusable="true"
+       	android:clickable="true"
+       	android:cacheColorHint="#00000000"/>
+        <RelativeLayout 
+            android:layout_width="fill_parent"
+        	android:layout_height="fill_parent">
+            <ProgressBar
+       		 android:id="@+id/progressBar1"
+       		 style="?android:attr/progressBarStyleLarge"
+        	 android:layout_width="wrap_content"
+        	 android:layout_height="wrap_content"
+        	 android:layout_centerHorizontal="true"
+        	 android:layout_centerVertical="true"
+        	 android:visibility="gone"/>
+        </RelativeLayout>
+    </FrameLayout>
+</RelativeLayout>
