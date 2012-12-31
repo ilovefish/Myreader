@@ -3,8 +3,12 @@ package com.example.Types;
 import java.text.DecimalFormat;
 import java.util.Vector;
 
+import com.example.ddd.R;
+
+
 import android.content.Context;
 import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
 import android.graphics.Canvas;
 import android.graphics.Color;
 import android.graphics.Paint;

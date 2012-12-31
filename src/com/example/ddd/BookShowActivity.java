@@ -16,6 +16,7 @@ import android.app.Dialog;
 import android.content.DialogInterface;
 import android.content.DialogInterface.OnClickListener;
 import android.content.Intent;
+import android.graphics.PointF;
 import android.graphics.Rect;
 import android.os.Bundle;
 import android.os.Environment;
@@ -63,11 +64,14 @@ public class BookShowActivity extends Activity{
 		mCurrentPageInfo = new PageInfo(w,h,this);
 		mNextPageInfo = new PageInfo(w,h,this);
 		try {
-			String s = FileUtil.getTxtType(new File(mFileInfo.getUri()));
-			mCurrentPageInfo.setmCharsetName(s);
-			mBookInfo.openBook(mFileInfo.getUri());
+//			String s = FileUtil.getTxtType(new File(mFileInfo.getUri()));
+//			mCurrentPageInfo.setmCharsetName(s);
+//			mBookInfo.openBook(mFileInfo.getUri());
+			mBookInfo.openBook("/sdcard/test.txt");
 			mBookInfo.onDrawPageByTag(mCurrentPageInfo);
 			mCurrentPageInfo.onDraw();
+			mBookInfo.onDrawPage(mNextPageInfo,mCurrentPageInfo.getmPageEnd());
+			mNextPageInfo.onDraw();
 			mBookView.setBitmaps(mCurrentPageInfo, mNextPageInfo);
 		} catch (FileNotFoundException e) {
 			finish();
@@ -83,7 +87,9 @@ public class BookShowActivity extends Activity{
 			@Override
 			public boolean onLongClick(View v) {
 				// TODO Auto-generated method stub
-				mBookView.setState(1);
+				if(mBookView.getState()!=3){
+					mBookView.setState(1);
+				}
 				return true;
 			}
 		});
@@ -130,6 +136,14 @@ public class BookShowActivity extends Activity{
 						Rect[] rect = mCurrentPageInfo.returnPickFont(downRect,moveRect);
 						mString = mCurrentPageInfo.returnString(downRect,moveRect);
 						mBookView.createRect(rect);
+					}else if(mBookView.getState() == 0){
+						mBookView.setState(3);
+						mBookView.calcCornerXY(downX,downY);
+						mBookView.setmTouch(new PointF(moveX,moveY));
+						mBookView.postInvalidate();
+					}else if(mBookView.getState() == 3){
+						mBookView.setmTouch(new PointF(moveX,moveY));
+						mBookView.postInvalidate();
 					}
 				}
 				return false;

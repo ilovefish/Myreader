@@ -48,6 +48,8 @@ public class MainActivity extends Activity {
 			replaceFiles.add(f);
 		}
 		ensureUI();
+		Intent intent = new Intent(MainActivity.this, BookShowActivity.class);
+		MainActivity.this.startActivity(intent);
 	}
 
 	@Override
@@ -78,7 +80,6 @@ public class MainActivity extends Activity {
 			@Override
 			public void onItemClick(AdapterView<?> arg0, View arg1, int arg2,
 					long arg3) {
-				Log.d("tag", "onItemClick:"+arg2);
 				Intent intent = new Intent(MainActivity.this, BookShowActivity.class);
 				FileInfo fileInfo = (FileInfo) arg0.getItemAtPosition(arg2);
 				if(fileInfo!=null){
