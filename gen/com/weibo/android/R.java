@@ -44,21 +44,21 @@ public final class R {
 		public static final int weibosdk_share_mblog_view = 0x7f030007;
 	}
 	public static final class drawable {
-		public static final int weibosdk_title_logo = 0x7f020018;
-		public static final int weibosdk_bg_delwords_sel = 0x7f02000e;
-		public static final int weibosdk_del_pic = 0x7f020013;
-		public static final int weibosdk_image_background = 0x7f020017;
-		public static final int weibosdk_dota = 0x7f020015;
-		public static final int weibosdk_bg_delwords_nor = 0x7f02000d;
-		public static final int weibosdk_bg_content = 0x7f02000b;
-		public static final int weibosdk_close_press = 0x7f020011;
-		public static final int weibosdk_bg_delwords = 0x7f02000c;
-		public static final int weibosdk_close_selector = 0x7f020012;
-		public static final int weibosdk_dialog_bg = 0x7f020014;
-		public static final int weibosdk_bg_btn = 0x7f02000a;
-		public static final int weibosdk_icon_delwords = 0x7f020016;
-		public static final int weibosdk_close_normal = 0x7f020010;
-		public static final int weibosdk_bg_title = 0x7f02000f;
+		public static final int weibosdk_title_logo = 0x7f020019;
+		public static final int weibosdk_bg_delwords_sel = 0x7f02000f;
+		public static final int weibosdk_del_pic = 0x7f020014;
+		public static final int weibosdk_image_background = 0x7f020018;
+		public static final int weibosdk_dota = 0x7f020016;
+		public static final int weibosdk_bg_delwords_nor = 0x7f02000e;
+		public static final int weibosdk_bg_content = 0x7f02000c;
+		public static final int weibosdk_close_press = 0x7f020012;
+		public static final int weibosdk_bg_delwords = 0x7f02000d;
+		public static final int weibosdk_close_selector = 0x7f020013;
+		public static final int weibosdk_dialog_bg = 0x7f020015;
+		public static final int weibosdk_bg_btn = 0x7f02000b;
+		public static final int weibosdk_icon_delwords = 0x7f020017;
+		public static final int weibosdk_close_normal = 0x7f020011;
+		public static final int weibosdk_bg_title = 0x7f020010;
 	}
 	public static final class dimen {
 		public static final int weibosdk_dialog_top_margin = 0x7f050001;
